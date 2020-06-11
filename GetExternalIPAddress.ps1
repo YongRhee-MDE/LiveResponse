@@ -18,10 +18,13 @@ arising out of the use of or inability to use the sample scripts or documentatio
 #>
 
 <#
-.Synopsis
+.SYNOPSIS
     Executes nslookup myip.opendns.com. resolver1.opendns.com within an MDATP Live response session
-.Description
+.DESCRIPTION
     Executes nslookup myip.opendns.com. resolver1.opendns.com witin an MDATP Live response session
+.INPUTS
+    Not applicable
+.EXAMPLE
     Within an MDATP Live Response session run the following commands to download the content to the machine
     putfile GetExternalIPaddress.ps1
     run the following command witin the live response session to execute the sript
