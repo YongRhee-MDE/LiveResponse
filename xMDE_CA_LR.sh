@@ -5,7 +5,7 @@
 #Run the client analyzer on macOS and Linux
 #https://learn.microsoft.com/microsoft-365/security/defender-endpoint/run-analyzer-macos-linux
 #Use nano or vim to edit this bash script
-#Contributors: John Nix, Mina Abdelmalek, Yong Rhee
+#Contributors: Andy Hsu, John Nix, Mina Abdelmalek, Yong Rhee
 #version: 241030
 
 #Remove the existing temp folder use to store the xMDEClientAnalyzer data
