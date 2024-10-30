@@ -46,7 +46,7 @@ mkdir /tmp/mdetemp/copytemp
 /usr/local/bin/mdatp diagnostic create --path /tmp/mdetemp/copytemp
 
 #Move the guid named zip file to a new location with a known file name to make it easier to use the Live Response API to collect the file when the script is complete.
-mv /tmp/mdetemp/copytemp/*.zip /tmp/mdetemp/mdediagnostics.zip
+mv /tmp/mdetemp/copytemp/*.zip /tmp/mdetemp/mde_diagnostics.zip
 
 
 /usr/local/bin//mdatp log level set --level info
@@ -54,4 +54,29 @@ echo Done setting MDE on macOS back to info mode
 
 #Finished collecting the data
 echo "xMDEClientAnalyzer data is available for download:/tmp/mdetemp/mdeclientanalyzerdata.zip"
-echo "MDE Diagnostics data is available for download:/tmp/mdetemp/mdediagnostics.zip"
+echo "MDE Diagnostics data is available for download:/tmp/mdetemp/mde_diagnostics.zip"
+
+#Known issue, it currently does not collect:
+#definitions.txt
+#dlp_health.txt
+#dlp_policy_files.zip
+#dlp_store_files.zip
+#exclusions.txt
+#health.txt
+#health_details_features.txt
+#lsof.txt
+#mdatp_config.txt
+#mde_bundle_validity.txt
+#mde_directories.txt
+#mde_event_statistics.txt
+#mde_process_sampling.zip
+#mde_process_vmmap.zip
+#mde_user.txt
+#mpenginedb.db
+#mpenginedb.db-shm
+#mpenginedb.db-wal
+#netext_config.txt
+#network_info.txt
+#permissions.txt
+#rtp_statistics.txt
+#threat_list.txt
