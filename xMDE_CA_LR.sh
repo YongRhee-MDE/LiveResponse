@@ -8,6 +8,11 @@
 #Contributors: Andy Hsu, John Nix, Mina Abdelmalek, Yong Rhee
 #version: 241030
 
+#Note
+#Window uses the Carriage Return and Line Feed invisible characters to represent the end of one line and beginning of a new line in a file, 
+#but macOS systems uses only the Line Feed invisible character at the end of its file lines. 
+#When using the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. 
+
 #Remove the existing temp folder use to store the xMDEClientAnalyzer data
 
 folder_path="/tmp/mdetemp"
@@ -48,13 +53,17 @@ mkdir /tmp/mdetemp/copytemp
 #Move the guid named zip file to a new location with a known file name to make it easier to use the Live Response API to collect the file when the script is complete.
 mv /tmp/mdetemp/copytemp/*.zip /tmp/mdetemp/mde_diagnostics.zip
 
-
 /usr/local/bin//mdatp log level set --level info
 echo Done setting MDE on macOS back to info mode
 
 #Finished collecting the data
 echo "xMDEClientAnalyzer data is available for download:/tmp/mdetemp/mdeclientanalyzerdata.zip"
 echo "MDE Diagnostics data is available for download:/tmp/mdetemp/mde_diagnostics.zip"
+
+#To download the files from Live Response, use getfile for these two files:
+getfile "/tmp/mdetemp/mdeclientanalyzerdata.zip"
+getfile "/tmp/mdetemp/mde_diagnostics.zip"
+#Note: Make sure that you include the double quotes, otherwise it will fail.
 
 #Known issue, it currently does not collect:
 #definitions.txt
