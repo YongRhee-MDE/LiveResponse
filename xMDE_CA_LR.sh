@@ -61,8 +61,8 @@ echo "xMDEClientAnalyzer data is available for download:/tmp/mdetemp/mdeclientan
 echo "MDE Diagnostics data is available for download:/tmp/mdetemp/mde_diagnostics.zip"
 
 #To download the files from Live Response, use getfile for these two files:
-getfile "/tmp/mdetemp/mdeclientanalyzerdata.zip"
-getfile "/tmp/mdetemp/mde_diagnostics.zip"
+#getfile "/tmp/mdetemp/mdeclientanalyzerdata.zip"
+#getfile "/tmp/mdetemp/mde_diagnostics.zip"
 #Note: Make sure that you include the double quotes, otherwise it will fail.
 
 #Known issue, it currently does not collect:
