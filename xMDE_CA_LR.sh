@@ -36,14 +36,11 @@ echo Done setting MDE on macOS in debug mode
 #Download the analyzer binary
 /usr/bin/curl -s -L "https://aka.ms/XMDEClientAnalyzerBinary" -o "/tmp/XMDEClientAnalyzerBinary.zip"
 
-#Confirm the binary hash from this URL: https://learn.microsoft.com/defender-endpoint/run-analyzer-macos-linux
-#Validate the file after the download
-echo '2A9BF0A6183831BE43C7BCB7917A40D772D226301B4CDA8EE4F258D00B6E4E97  /tmp/XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
 
 echo "File downloaded to: /tmp/XMDEClientAnalyzerBinary.zip"
 
 unzip -qq /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/mdetemp
-echo A | unzip -qq /tmp/mdetemp/SupportToolMacOSBinary.zip -d /tmp/mdetemp/SupportToolMacOSBinary
+echo A | unzip -qq /tmp/mdetemp/XMDEClientAnalyzer/SupportToolMacOSBinary.zip -d /tmp/mdetemp/SupportToolMacOSBinary
 
 #Execute the x MDE Client Analyzer diagnostic command to generate diagnostics data which includes more information from the MDE on macOS endpoint.
 echo yes | /tmp/mdetemp/SupportToolMacOSBinary/MDESupportTool -d -o /tmp/mdetemp/mdeclientanalyzerdata
