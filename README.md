@@ -1,8 +1,8 @@
-# Microsoft Defender Advanced Threat Protection (MDATP, an endpoint detection and resposnse (EDR)) - LiveResponse
+# Microsoft Defender For Endpoint (MDE, an endpoint detection and resposnse (EDR)) - LiveResponse
 
-Thanks for your interest in Microsoft Defender ATP (MDATP)!
+Thanks for your interest in Microsoft Defender For Endpoint (MDE)!
 
-This repository hosts Powershell (PoSh) script samples for "Live Response" in your Microsoft Defender ATP (a part of the Microsoft 365 Threat Protection (MTP)).
+This repository hosts Powershell (PoSh) script samples for "Live Response" in your Microsoft Defender For Endpoint (a part of the Microsoft 365 Threat Protection (MTP)).
 
 Any scripts that further this goal are welcome.
 
